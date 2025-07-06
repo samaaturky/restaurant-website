@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&family=Tajawal&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", serif;
+  color: #333;
+  background-image: url(img/pexels-pixabay-326281.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.login-div {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 150px 10px;
+  width: 450px;
+  background-color: rgba(202, 198, 193, 0.8);
+  position: absolute;
+  right: 10%;
+  top: 5%;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.rest-logo {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  gap: 10px;
+  cursor: pointer;
+}
+.rest-logo img {
+  width: 50px;
+}
+.rest-logo h1 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+h4 {
+  text-align: center;
+  font-size: 0.9em;
+  margin-bottom: 20px;
+  color: #666;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+form label {
+  font-size: 0.9em;
+  color: #555;
+  display: block;
+}
+form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 0.9em;
+  outline: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+form input:focus {
+  border-color: #76c7c0;
+}
+button {
+  background-color: #2cd483;
+  color: white;
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #1a9b60;
+}
+button:active {
+  background-color: #3e8e41;
+  transform: translateY(1px);
+}
+p {
+  margin-top: 10px;
+  font-size: small;
+}
+p a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+p a:hover {
+  color: #1a9b60;
+}
+
+.show_password {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  font-family: Arial, sans-serif;
+}
+
+/* Custom Checkbox Container */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Spacing between checkbox and label */
+  cursor: pointer;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Remove default checkbox styling */
+.checkbox-input {
+  appearance: none; /* Removes default OS checkbox */
+  width: 16px;
+  height: 16px;
+  border: 2px solid #999;
+  border-radius: 4px; /* Slight rounded corners */
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Add checkmark when checked */
+.checkbox-input:checked {
+  background-color:#2cd483; 
+  border-color: #011707;
+}
+
+.checkbox-input:checked::before {
+  content: '\2713'; /* Unicode checkmark */
+  position: absolute;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+/* Label Text Styling */
+.checkbox-label {
+  color: #333;
+  transition: color 0.2s ease;
+  user-select: none;
+}
+
+.checkbox-container:hover .checkbox-label {
+  color: #fff; 
+}
+
+@media (max-width: 768px) {
+  .login-div {
+    width: 90%;
+    /* right: 5%;
+    top: 10%; */
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  form input {
+    font-size: 12px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-div {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: auto;
+  }
+}

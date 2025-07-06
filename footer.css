@@ -1,0 +1,115 @@
+footer {
+  background-color: #2cd483;
+  width: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px 20px 0 0;
+  bottom: 0;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+
+.footer-links {
+  margin-left: 3.5%;
+}
+
+.footer-links a {
+  font-size: 1.06rem;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #fff; /* Text turns white */
+  transform: translateY(-3px);
+}
+
+ul {
+  list-style: none;
+}
+footer a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  gap: 10px;
+  box-shadow: #dad2d2;
+}
+footer li {
+  margin: 20px 1px;
+  gap: 10px;
+}
+.footer-social i {
+  margin-right: 8px;
+  font-size: 20px;
+  transition: color 0.3s ease;
+  box-shadow: #2cd483;
+}
+
+.footer-social li {
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-social ul {
+  margin-top: 80%;
+}
+
+.footer-social li:hover {
+  color: #fff;
+  transform: translateY(-3px);
+}
+footer .rest-logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+footer .rest-logo h1 {
+  color: #5d5c5c;
+}
+
+.divider {
+  margin: 150px;
+}
+@media (max-width: 480px) {
+  footer {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
+/* Scroll CSS */
+#scroll-to-top {
+  position: fixed; /* Fix the icon's position relative to the viewport */
+  bottom: 15px; /* Position it 20px from the bottom of the screen */
+  right: 15px; /* Position it 20px from the right of the screen */
+  font-size: 15px; /* Adjust the size of the icon */
+  background-color: #2cd483d8; /* Add a background color to the icon */
+  color: white; /* Icon color */
+  padding: 15px; /* Padding to make the icon bigger and clickable */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: add a shadow for better visibility */
+  cursor: pointer; /* Change the cursor to a pointer when hovered */
+  transition: background-color 0.3s; /* Smooth background color change on hover */
+}
+
+#scroll-to-top:hover {
+  background-color: #158348; /* Change color on hover */
+}
+
+/* Optional: Add media queries for responsiveness */
+@media (max-width: 768px) {
+  #scroll-to-top {
+    font-size: 10px; /* Adjust icon size on smaller screens */
+    bottom: 10px;
+    right: 10px;
+  }
+}

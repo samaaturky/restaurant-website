@@ -1,0 +1,263 @@
+/* General Styles */
+body {
+  font-family: "Poppins", serif;
+  margin: 0;
+  background: #f7f4f4;
+}
+
+h1 {
+  margin: 0;
+}
+
+
+
+/* Header Section */
+.menu-header {
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 20px;
+  border-bottom: 2px solid #ddd;
+}
+
+/* .menu-header h1 {
+  font-size: 2rem;
+} */
+
+/* Menu Container */
+.menu-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Ensure content stays within the container */
+  animation: fadeIn 1s ease-in-out;
+  /* animation: slideInDown 1s ease-out; */
+}
+
+.delete-button {
+  background-color: #ffffff; 
+  color: #1a9b60; 
+  border: 2px solid #18dd74; 
+  border-radius: 4px; 
+  padding: 8px 12px; 
+  font-size: 1rem; 
+  font-weight: bold; 
+  cursor: pointer; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease; 
+}
+
+.delete-button:hover {
+  background-color: #158348; 
+  color: #ffffff;
+  border-color: #1a9b60; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+  transform: translateY(-2px); 
+}
+
+/* Menu Cards Section */
+.menu-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.menu-card {
+  position: relative; /* Establish positioning context for child elements */
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 250px;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-card:hover {
+  transform: scale(1.05);
+  background-color: #1a9b60;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+  background-color: #2cd483;
+  color: white;
+  padding: 8px;
+  font-weight: bold;
+  border-radius: 4px 4px 0 0;
+}
+
+.menu-card img {
+  width: 180px;
+  height: 180px;
+  margin: 10px auto;
+  border-radius: 50%;
+  border: 2px solid #1a9b60;
+}
+
+/* Menu Items Container */
+.menu-items-container {
+  display: none;
+  position: relative;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 10px;
+  z-index: 1;
+}
+
+.menu-items-container.active {
+  display: block;
+}
+
+.menu-item {
+  display: flex;
+  align-items: flex-start; /* Align items at the top */
+  gap: 15px;
+  padding: 10px;
+  border-bottom: 1px solid #ddd; /*a bottom border for separation */
+  animation: fadeInRight 0.5s ease-in-out;
+  flex-wrap: wrap; /*wrapping for long text */
+}
+
+.menu-item:last-child {
+  border-bottom: none; /* Remove border for the last item */
+}
+
+.menu-item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  flex-shrink: 0; /* Prevent the image from shrinking */
+}
+
+.menu-item-content {
+  flex: 1; /* Allow content to grow and fill remaining space */
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-item h3 {
+  margin: 0 0 5px 0; /* Add margin below heading */
+  font-size: 1.2rem; /* Adjust font size */
+  color: #333;
+}
+
+.menu-item p {
+  margin: 0; /* Remove default margins */
+  font-size: 1rem; /* Standard paragraph size */
+  line-height: 1.5; /* Improve readability */
+  color: #555;
+  word-wrap: break-word; /* Ensure long words wrap to the next line */
+}
+
+/* Admin Form Section */
+.admin-actions {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: slideUp 0.7s ease-in-out;
+}
+
+.admin-actions h2 {
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #1a9b60;
+  text-align: center;
+}
+
+.admin-actions label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.admin-actions input[type="text"],
+.admin-actions select,
+.admin-actions textarea,
+.admin-actions input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.admin-actions button {
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #1a9b60;
+  color: white;
+  box-shadow: #333;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.admin-actions button:hover {
+  background-color: #158348;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-card {
+    width: 100%;
+  }
+
+  .menu-item img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

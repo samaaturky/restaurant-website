@@ -1,0 +1,158 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", serif;
+  line-height: 1.6;
+  background-color: #f7f4f4;
+  animation: fadeInBody 1s ease-in;
+}
+
+/* Fade-in animation for body */
+@keyframes fadeInBody {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Combined Container */
+.combined-container {
+  border-radius: 10px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex; /* Use flexbox for horizontal layout */
+  justify-content: space-between; /* Space between the video and form */
+  animation: fadeInContent 1.5s ease-out;
+}
+
+/* Fade-in animation for main content */
+@keyframes fadeInContent {
+  from {
+    opacity: 0.3;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Video Container */
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+}
+
+.video-custom-size {
+  width: 100%;
+  height: auto;
+}
+
+.reservation-form {
+  border-radius: 8px;
+  width: 50%;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 30px;
+  color: #333;
+  animation: textBounce 1.5s ease-in-out;
+}
+
+/* Bounce animation for h2 */
+@keyframes textBounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-15px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+h3 {
+  color: #3a413aa1;
+  font-weight: normal;
+}
+
+form .form-label {
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* Fixed input field styles for text to appear */
+form .form-control,
+form .form-select,
+form textarea {
+  color: #333; /* Ensure the text is visible */
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font-size: 1em;
+  padding: 10px;
+}
+
+form .form-control:focus,
+form .form-select:focus,
+form textarea:focus {
+  color: #333; /* Text remains visible on focus */
+  border-color: #76c7c0;
+  box-shadow: none;
+}
+
+form button {
+  background-color: #2cd483;
+  color: white;
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  animation: popUpButton 2s ease-out;
+}
+
+form button:hover {
+  background-color: #1a9b60;
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Pop-up animation for button */
+@keyframes popUpButton {
+  from {
+    transform: scale(0.4);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .combined-container {
+    flex-direction: column; /* Stack video and form vertically on smaller screens */
+  }
+
+  .video-container,
+  .reservation-form {
+    width: 100%; /* Full width on smaller screens */
+  }
+}
